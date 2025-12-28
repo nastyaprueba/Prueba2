@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Nueva Galería</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #ffffff; 
+            text-align: center;
+        }
 
+        h1 { color: #333; margin-bottom: 30px; }
+
+        /* Cuadrícula de 3 columnas */
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 15px; 
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .foto-item {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1; /* Cuadros perfectos */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .foto-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .foto-item img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Ajuste para celulares */
+        @media (max-width: 600px) {
+            .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>GALERÍA PRUEBA 2</h1>
+
+    <div class="galeria-grid">
+        <div class="foto-item">
+            <a href="1639634734820.png" target="_blank">
+                <img src="1639634734820.png">
+            </a>
+        </div>
+
+        <div class="foto-item">
+            <a href="1639637743605.jpg" target="_blank">
+                <img src="1639637743605.jpg">
+            </a>
+        </div>
+
+        <div class="foto-item">
+            <a href="1639702409087.png" target="_blank">
+                <img src="1639702409087.png">
+            </a>
+        </div>
+
+        <div class="foto-item">
+            <a href="1640316954560.png" target="_blank">
+                <img src="1640316954560.png">
+            </a>
+        </div>
+
+        <div class="foto-item">
+            <a href="1640318340843.png" target="_blank">
+                <img src="1640318340843.png">
+            </a>
+        </div>
+
+        <div class="foto-item">
+            <a href="1640327239412.png" target="_blank">
+                <img src="1640327239412.png">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
